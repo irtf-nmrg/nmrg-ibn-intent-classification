@@ -2134,7 +2134,7 @@ Authors' Addresses
    Email: pedro@nict.go.jp
 
    Jeferson Campos Nobre
-   University of Vale do Rio dos Sinos
+   Federal University of Rio Grande do Sul
    Porto Alegre
    Brazil
    Email: jcnobre@inf.ufrgs.br
