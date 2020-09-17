@@ -510,9 +510,9 @@ Internet-Draft          Intent Classification                July 2020
    The following intent types need to be supported, in order to address
    the requirements from different solutions and intent users:
 
-   o Customer network service intent
+   o Customer service intent
 
-        o for customer self-service
+        o for customer self-service with SLA or add service
 
         o for service operator orders
 
@@ -522,35 +522,45 @@ Li, et al.            Expires January 28, 2021               [Page 10]
 Internet-Draft          Intent Classification                July 2020
 
 
-        o for intent-driven network configuration, verification,
-             correction and optimization
+   o Network and Underlay Network service intent
 
-   o Network resource management
+        o for service operator orders
 
-        o For network configuration
+        o for intent driven network configuration, verification, correction and optimization
 
-        o For automated life-cycle management of network configurations
+        o for intent created and provided by the underlay network administrator
 
-        o For network resources (switches, routers, routing, policies,
-             underlay)
-
-   o Cloud and cloud resource management
+   o Network and Underlay Network intent
+        
+        o for network configuration
+        
+        o For automated lifecycle management of network configurations
+        
+        o For network resources (switches, routers, routing, policies, underlay)
+   
+   o Cloud management intent
 
         o For DC configuration, VMs, DB Servers, APP Servers
 
         o For communication between VMs
 
+   o Cloud resource management intent
+   
         o For cloud resource life-cycle management (policy driven self-
              configuration and auto-scaling and recovery/optimization)
 
-   o Network Policy intent
+   o Strategy intent
 
         o For security, QoS, application policies, traffic steering, etc
 
         o For configuring and monitoring policies, alarms generation for
           non-compliance, auto-recovery
+          
+        o For design models and policies for network and network service design
+        
+        o For design workflows, models and policies for operational task intents
 
-   o Task-based intents
+   o Operational task intents
 
         o For network migration
 
@@ -563,24 +573,12 @@ Internet-Draft          Intent Classification                July 2020
         o To automate any tasks that operators/administrator often
            perform
 
-   o System policies intents
-
-        o For intent management system policies
-
-        o For design models and policies for network service design
-
-
-
+  
 Li, et al.            Expires January 28, 2021               [Page 11]
 
 Internet-Draft          Intent Classification                July 2020
 
-
-        o For design models and policies for network design
-
-        o For design workflows, models and policies for task-based
-             intents
-
+       
    o Intents that affect other intents
 
         o It may be task-based intent that modifies many other intents.
@@ -636,7 +634,7 @@ Internet-Draft          Intent Classification                July 2020
    declarative policy, represent the users that define and issue the
    intent request. Depending on the Intent Solutions, there are specific
    intent actors. Examples of intent actors are customers, network
-   operators, service operators, enterprise, cloud, and underlay network
+   operators, service operators, enterprise administrators, cloud administrators, and underlay network
    administrators, or application developers.
 
    o Customers and end-users do not necessarily know the functional and
@@ -1350,8 +1348,8 @@ Internet-Draft          Intent Classification                July 2020
    | Intent User   | Intent Type |    Intent Type Description          |
    +-------------------------------------------------------------------+
    | Customer /    | Customer    | Customer Self-Service via Tenant    |
-   | Tenants       | Intent      | Portal, Customers may have multiple |
-   |               |             | type of end-users.                  |
+   | Tenants       | Service     | Portal, Customers may have multiple |
+   |               | Intent      | type of end-users.                  |
    |               |             | Example: Request GPU computing and  |
    |               |             | storage resources to meet 10k video |
    |               |             | surveillance services.              |
@@ -1705,9 +1703,9 @@ Internet-Draft          Intent Classification                July 2020
    +--------------+-------------+-------------------------------------+
    | Intent User  | Intent Type |    Intent Type Description          |
    +--------------+---------------------------------------------------+
-   | End-User     | End-User    | Enterprise End-User Self-Service or |
-   |              | Intent      | Applications, Enterprise may have   |
-   |              |             | multiple types of End-Users.        |
+   | End-User     | Customer    | Enterprise End-User Self-Service or |
+   |              | Service     | Applications, Enterprise may have   |
+   |              | Intent      | multiple types of End-Users.        |
    |              |             | Example: Request access to VPN      |
    |              |             | service.                            |
    |              |             | Request video conference between    |
