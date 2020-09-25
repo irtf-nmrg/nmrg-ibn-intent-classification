@@ -152,8 +152,9 @@ Table of Contents
 
    The vision of intent-driven networks has attracted a lot of
    attention, as it promises to simplify the management of networks by
-   human operators by simply specifying what should happen on the
-   network, without giving any instructions on how to do it. This
+   human operators. This is done by simply specifying what should 
+   happen on the network, without giving any instructions on how to 
+   do it. This
 
 
 Li, et al.            Expires January 28, 2021                [Page 3]
@@ -162,28 +163,30 @@ Internet-Draft          Intent Classification                July 2020
 
 
    promise led many telecom companies to begin adopting this new
-   paradigm, and many SDOs to propose various intent variants.
+   vision, and many Standards Development Organization (SDOs) to propose 
+   different intent framework.
 
-   All SDOs, and open source projects, such as IETF [ANIMA], ONF [ONF],
-   ONOS [ONOS], have proposed intents as a declarative interface for
-   defining a set of network operations to execute.
+   Several SDOs and open source projects, such as Internet Engineering Task 
+   Force (IETF) (by the Autonomic Networking Integrated Model and 
+   Approach Working Group [ANIMA]), Open Networking Foundation (ONF) [ONF], 
+   Open Network Operating System (ONOS) [ONOS], have proposed intents for 
+   defining a set of network operations to execute in a declarative manner.
 
-   As such, IETF [ANIMA] defines intent as a declarative policy and
-   focuses on providing a more complete definition of it, a tentative
-   format, and a life-cycle. Within ONF [ONOS] intent is represented as
-   a list of CLI commands that allows users to pass low-level details on
-   the network, such as flows, or host addresses. ONF through its
-   Boulder and Aspen projects focuses on NBI semantics and intent
-   models.
+   IETF [ANIMA] defines intent as a declarative policy, but still lacks 
+   a more complete definition, a tentative format, and a life-cycle. 
+   Within ONOS [ONOS], intent is represented as a list of Command-Line 
+   Interface (CLI) commands that allows users to bypass low-level details 
+   on the network, such as flows or host addresses. ONF through its Boulder 
+   and Aspen projects focuses on NorthBound Interface (NBI) semantics and 
+   intent models.
 
-   As it can be observed, each of the aforementioned SDOs came up with
-   their own way of specifying an intent, and with their own
-   understanding of what an Intent is. Each SDO defines a set of terms
-   and level of abstraction, its intended users, and the applications
-   and usage scenarios.
+   The SDOs usually came up with their own way of specifying an intent, 
+   and with their own understanding of what an intent is. Besides that,
+   each SDO defines a set of terms and level of abstraction, its intended 
+   users, and the applications and usage scenarios.
 
 
-   However, all intent approaches proposed by SDOs share the same
+   However, mostly intent approaches proposed by SDOs share the same
    following features:
 
    o It must be declarative in nature, meaning that a user specifies the
@@ -197,13 +200,16 @@ Internet-Draft          Intent Classification                July 2020
       users' interaction with the intent system through the usage of
       familiar terminology or concepts.
 
-   o It should be able to detect and resolve intent conflicts.
+   o It should be able to detect and resolve intent conflicts, which 
+      include, for example, static (compile-time) conflicts and dynamic 
+      (run-time ) conflicts.
 
    Currently, work is underway on unifying a common understanding of
-   intent concepts and terminology. [CLEMM] is currently leading these
-   efforts by defining intent as higher-level declarative policy that
-   operates at the level of network and services it provides, and by
-   capturing the differences between intent, policy and service.
+   intent concepts and terminology. Concerning NMRG, 
+   [CLEMM] is a document to present a definition for intent as 
+   higher-level declarative policy that operates at the level of 
+   network and services it provides. In addition, this document 
+   captures the differences between intent, policy and service.
 
 
 
@@ -212,29 +218,26 @@ Li, et al.            Expires January 28, 2021                [Page 4]
 Internet-Draft          Intent Classification                July 2020
 
 
-   However, even with proposed intent concepts and terminology, and
+   However, even with proposed intent concepts and terminology as well as
    agreement on common intent characteristics, an intent may still be
    viewed in different ways by different stakeholders for different use
    cases and solutions.
 
    The goal of this document is to clarify what an intent represents for
-   different stakeholders, by means of classification on various
-   dimensions, such as solutions, users and intent types. This
-   classification could ensure a common understanding across all
-   participants and it can be used to identify the scope and priorities
-   of individual projects, PoCs, research or open-source projects.
+   different stakeholders through a classification on various
+   dimensions, such as solutions, users, and intent types. This
+   classification can ensure a common understanding across all
+   participants and be used to identify the scope and priorities
+   of individual projects, Proof of Concepts (PoCs), research initiatives,
+   or open-source projects. This goal is achieved by proposing the 
+   methodology and initial classification tables. This methodology can 
+   be used to update the tables by adding or removing different 
+   solutions, users or intent types in order to cater for future 
+   scenarios, applications or domains.
 
-
-   This is achieved by proposing the methodology and initial
-   classification tables. This methodology can be used to update the
-   tables by adding or removing different solutions, users or intent
-   types in order to cater for future scenarios, applications or
-   domains.
-
-
-   Together with [CLEMM], this draft aims to become the foundation for
-   future intent-related topic discussions where all participants have
-   the same common understanding.
+   The present document, together with [CLEMM], aims to become the 
+   foundation for future intent-related topic discussions regarding
+   the NMRG.
 
 2. Key Words
 
@@ -2131,7 +2134,7 @@ Authors' Addresses
    Email: pedro@nict.go.jp
 
    Jeferson Campos Nobre
-   University of Vale do Rio dos Sinos
+   Federal University of Rio Grande do Sul
    Porto Alegre
    Brazil
    Email: jcnobre@inf.ufrgs.br
