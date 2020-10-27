@@ -9,8 +9,8 @@ Expires: April 2021                                             W. Liu
                                                               J. Nobre
                                                                  UFRGS
                                                               D. Lopez
-                                                      Telefonica, I+D
-                                                      October 21, 2020
+                                                       Telefonica, I+D
+                                                      October 27, 2020
 
 
 
@@ -40,7 +40,7 @@ Status of this Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on March 16, 2020.
+   This Internet-Draft will expire on April 21, 2020.
 
 Copyright Notice
 
@@ -49,7 +49,7 @@ Copyright Notice
 
 
 
-Liu, et al.            Expires April 21, 2021                 [Page 1]
+Liu, et al.            Expires April 27, 2021                 [Page 1]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -73,7 +73,8 @@ Abstract
    now, there is no commonly agreed definition, interface or model of
    intent.
 
-   This document discusses the concept of intent. Specifically, it
+   This document discusses mostly the concept of network intents, but
+   other types of intents are also being considered. Specifically, it
    highlights stakeholder perspectives of intent, methods to classify
    and encode intent, the associated intent taxonomy, and defines
    relevant intent terms where necessary. This document provides a
@@ -101,8 +102,7 @@ Abstract
 
 
 
-
-Li, et al.             Expires April 21, 2021                 [Page 2]
+Li, et al.             Expires April 27, 2021                 [Page 2]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -113,14 +113,14 @@ Table of Contents
    1. Introduction ................................................ 3
    2. Key Words ................................................... 5
    3. Acronyms .................................................... 5
-   4. Abstract Intent Requirements................................. 6
+   4. Abstract Intent Requirements................................. 7
       4.1. What is Intent?......................................... 7
-      4.2. Intent Solutions and Intent Users ....................... 7
+      4.2. Intent Solutions and Intent Users ....................... 8
       4.3. Current Problems and Requirements ....................... 9
       4.4. Intent Types that need to be supported ................. 10
    5. Functional Characteristics and Behavior ..................... 12
-      5.1. Abstracting Intent Operation........................... 12
-      5.2. Intent User Types...................................... 13
+      5.1. Abstracting Intent Operation ........................... 12
+      5.2. Intent User Types ...................................... 13
       5.3. Intent Scope .......................................... 14
       5.4. Intent Network Scope................................... 14
       5.5. Intent Abstraction..................................... 14
@@ -156,7 +156,7 @@ Table of Contents
    on the network, without giving any instructions on how to do it. This
 
 
-Li, et al.             Expires April 21, 2021                 [Page 3]
+Li, et al.             Expires April 27, 2021                 [Page 3]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -210,7 +210,7 @@ Internet-Draft          Intent Classification             October 2020
    between intent, policy and service.
 
 
-Li, et al.             Expires April 21, 2021                 [Page 4]
+Li, et al.             Expires April 27, 2021                 [Page 4]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -218,7 +218,9 @@ Internet-Draft          Intent Classification             October 2020
    However, even with proposed intent concepts and terminology, as well
    as agreement on common intent characteristics, an intent may still be
    viewed in different ways by different stakeholders for different use
-   cases and solutions.
+   cases and solutions. This document mostly addresses intents in the
+   context of network intents, however other types of intents are not
+   excluded, as presented in Section 4.4. and Section 6.2. .
 
    The goal of this document is to clarify what an intent represents for
    different stakeholders through a classification on various
@@ -257,14 +259,14 @@ Internet-Draft          Intent Classification             October 2020
 
      DB: Data Base
 
-     DC: Data Center
 
-
-Li, et al.             Expires April 21, 2021                 [Page 5]
+Li, et al.             Expires April 27, 2021                 [Page 5]
 
 Internet-Draft          Intent Classification             October 2020
 
 
+
+     DC: Data Center
 
      ECA: Event-Condition-Action
 
@@ -301,18 +303,22 @@ Internet-Draft          Intent Classification             October 2020
      VPN: Virtual Private Network
 
 
+
+
+
+
+
+
+Li, et al.             Expires April 27, 2021                 [Page 6]
+
+Internet-Draft          Intent Classification             October 2020
+
+
 4. Abstract Intent Requirements
 
    In order to understand the different intent requirements that would
    drive intent classification, we first need to understand what intent
    means for different intent users.
-
-
-
-Li, et al.             Expires April 21, 2021                 [Page 6]
-
-Internet-Draft          Intent Classification             October 2020
-
 
 4.1. What is Intent?
 
@@ -351,6 +357,15 @@ Internet-Draft          Intent Classification             October 2020
    Therefore, it is important to start a discussion in the industry
    about what intent is for different solutions and intent users. It is
    also imperative to try to propose some intent categories /
+
+
+
+
+Li, et al.             Expires April 27, 2021                 [Page 7]
+
+Internet-Draft          Intent Classification             October 2020
+
+
    classifications that could be understood by a wider audience. This
    would help us define intent interfaces, DSLs and models.
 
@@ -358,13 +373,6 @@ Internet-Draft          Intent Classification             October 2020
 
    Different Solutions and Actors have different requirements,
    expectations and priorities for intent-driven networking. They
-
-
-Li, et al.             Expires April 21, 2021                 [Page 7]
-
-Internet-Draft          Intent Classification             October 2020
-
-
    require different intent types and have different use cases. Some
    users are more technical and require intents that expose more
    technical information. Other users do not understand networks and
@@ -405,15 +413,7 @@ Internet-Draft          Intent Classification             October 2020
       below 70%.
 
 
-
-
-
-
-
-
-
-
-Li, et al.             Expires April 21, 2021                 [Page 8]
+Li, et al.             Expires April 27, 2021                 [Page 8]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -466,7 +466,7 @@ o Can User A listen to communications between Users B and C?
 
 
 
-Li, et al.             Expires April 21, 2021                 [Page 9]
+Li, et al.             Expires April 27, 2021                 [Page 9]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -520,7 +520,7 @@ o Customer service intent
      o   for service operator orders
 
 
-Li, et al.             Expires April 21, 2021                [Page 10]
+Li, et al.             Expires April 27, 2021                [Page 10]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -574,7 +574,7 @@ o Operation task intents
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 11]
+Li, et al.             Expires April 27, 2021                [Page 11]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -628,7 +628,7 @@ o Intents that affect other intents
    elements of the three-tuple, and may be used to describe how the
 
 
-Li, et al.             Expires April 21, 2021                [Page 12]
+Li, et al.             Expires April 27, 2021                [Page 12]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -682,7 +682,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 13]
+Li, et al.             Expires April 27, 2021                [Page 13]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -734,7 +734,7 @@ Internet-Draft          Intent Classification             October 2020
       abstraction without technical feedback.
 
 
-Li, et al.             Expires April 21, 2021                [Page 14]
+Li, et al.             Expires April 27, 2021                [Page 14]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -788,7 +788,7 @@ Internet-Draft          Intent Classification             October 2020
       themselves. - Intent based on limited AI
 
 
-Li, et al.             Expires April 21, 2021                [Page 15]
+Li, et al.             Expires April 27, 2021                [Page 15]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -842,7 +842,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 16]
+Li, et al.             Expires April 27, 2021                [Page 16]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -853,6 +853,22 @@ Internet-Draft          Intent Classification             October 2020
    belong to, based on intent scope, network scope, intent abstraction
    and life-cycle.
 
+   The intent classification workflow starts from the Solution
+   Knowledge, which can provide information on requirements, use cases,
+   technologies used, network properties, actors that define and issue
+   the intent request, and requirements. The information provided in the
+   solution knowledge is provided as input to identifying the intent
+   solution (e.g. Carrier, Enterprise, Data Center). The next step is to
+   review the existing classification and use/add/remove the intent
+   solution identified from the solution knowledge (R1-U1).
+   The next step is identifying intent user types (e.g. customer,
+   network operators, service operators, etc.) and then review existing
+   classification and either use or add/remove the intent user type
+   identified from the solution knowledge (R2-U2). This whole process is
+   repeated for intent types, intent scope, network scope, intent
+   abstractions and life-cycle requirements. Besides these, new
+   categories can be identified as new domains or applications are
+   emerging, which are not listed in the current methodology.
 
 
 
@@ -877,25 +893,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Li, et al.             Expires April 21, 2021                [Page 17]
+Li, et al.             Expires April 27, 2021                [Page 17]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -920,17 +918,17 @@ Internet-Draft          Intent Classification             October 2020
    |Identify New +-----------+ | |   +----------->   Identify        |
    |Categories   | R8        | | |   | U2        |   Intent          |
    |             <---------- | | |   | +---------+   User Types      |
-   +--------+----+         | | | |   | |         +-------------------+
-            ^              | | | |   | |
-            |            +-+-v-+-v---+-v+
-   +--------+----+ U7    |              | R3     +-------------------+
+   +--------+----+         | | | |   | |         +-------|-----------+
+            ^              | | | |   | |                 |
+            |            +-+-v-+-v---+-v+                |
+   +--------+----+ U7    |              | R3     +------ v ----------+
    |Identify     +------->Intent        +-------->   Identify        |
    |Life-cycle   | R7    |Classification| U3     |   Type            |
    |Requirements <-------+              <--------+   of Intent       |
-   +--------+----+       +-^--^-+--^-+--+        +-------------------+
-            ^              || | |  | |
-            |              || | |  | |
-   +--------+----+         || | |  | | R4        +-------------------+
+   +--------+----+       +-^--^-+--^-+--+        +-------|-----------+
+            ^              || | |  | |                   |
+            |              || | |  | |                   |
+   +--------+----+         || | |  | | R4        +-------v-----------+
    |Identify     | U6      || | |  | +----------->   Identify        |
    |Abstractions +----------| | |  |   U4        |   Intent          |
    |             <----------+ | |  +-------------+   Scope           |
@@ -943,7 +941,7 @@ Internet-Draft          Intent Classification             October 2020
                       +-----------------+
 
 
-Li, et al.             Expires April 21, 2021                [Page 18]
+Li, et al.             Expires April 27, 2021                [Page 18]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -994,7 +992,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 19]
+Li, et al.             Expires April 27, 2021                [Page 19]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1042,7 +1040,7 @@ Internet-Draft          Intent Classification             October 2020
                                    +--------------------------------+
 
 
-Li, et al.             Expires April 21, 2021                [Page 20]
+Li, et al.             Expires April 27, 2021                [Page 20]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1091,7 +1089,7 @@ Internet-Draft          Intent Classification             October 2020
    |             |             |configurations (switches, routers,     |
 
 
-Li, et al.             Expires April 21, 2021                [Page 21]
+Li, et al.             Expires April 27, 2021                [Page 21]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1141,7 +1139,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 22]
+Li, et al.             Expires April 27, 2021                [Page 22]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1189,7 +1187,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 23]
+Li, et al.             Expires April 27, 2021                [Page 23]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1238,7 +1236,7 @@ Internet-Draft          Intent Classification             October 2020
    The following is the Classification Table Example for Carrier.
 
 
-Li, et al.             Expires April 21, 2021                [Page 24]
+Li, et al.             Expires April 27, 2021                [Page 24]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1286,7 +1284,7 @@ Internet-Draft          Intent Classification             October 2020
 +---------+---------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
 
 
-Li, et al.             Expires April 21, 2021                [Page 25]
+Li, et al.             Expires April 27, 2021                [Page 25]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1337,7 +1335,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 26]
+Li, et al.             Expires April 27, 2021                [Page 26]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1390,7 +1388,7 @@ Internet-Draft          Intent Classification             October 2020
    |               |             | in Network N1.                      |
 
 
-Li, et al.             Expires April 21, 2021                [Page 27]
+Li, et al.             Expires April 27, 2021                [Page 27]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1440,7 +1438,7 @@ Internet-Draft          Intent Classification             October 2020
    |               |             | Network Service and Resource        |
 
 
-Li, et al.             Expires April 21, 2021                [Page 28]
+Li, et al.             Expires April 27, 2021                [Page 28]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1489,7 +1487,7 @@ Internet-Draft          Intent Classification             October 2020
    |               |             | resources.                          |
 
 
-Li, et al.             Expires April 21, 2021                [Page 29]
+Li, et al.             Expires April 27, 2021                [Page 29]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1540,7 +1538,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 30]
+Li, et al.             Expires April 27, 2021                [Page 30]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1593,7 +1591,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 31]
+Li, et al.             Expires April 27, 2021                [Page 31]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1641,7 +1639,7 @@ Internet-Draft          Intent Classification             October 2020
    |         | Strategy    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 
-Li, et al.             Expires April 21, 2021                [Page 32]
+Li, et al.             Expires April 27, 2021                [Page 32]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1691,7 +1689,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 33]
+Li, et al.             Expires April 27, 2021                [Page 33]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1740,7 +1738,7 @@ Internet-Draft          Intent Classification             October 2020
    |              |             | the bandwidth requirements of 4K    |
 
 
-Li, et al.             Expires April 21, 2021                [Page 34]
+Li, et al.             Expires April 27, 2021                [Page 34]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1788,7 +1786,7 @@ Internet-Draft          Intent Classification             October 2020
    |              +---------------------------------------------------+
 
 
-Li, et al.             Expires April 21, 2021                [Page 35]
+Li, et al.             Expires April 27, 2021                [Page 35]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1839,7 +1837,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 36]
+Li, et al.             Expires April 27, 2021                [Page 36]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1888,7 +1886,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 37]
+Li, et al.             Expires April 27, 2021                [Page 37]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1942,7 +1940,7 @@ Internet-Draft          Intent Classification             October 2020
    their exchanges.
 
 
-Li, et al.             Expires April 21, 2021                [Page 38]
+Li, et al.             Expires April 27, 2021                [Page 38]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -1996,7 +1994,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 39]
+Li, et al.             Expires April 27, 2021                [Page 39]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -2050,7 +2048,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 40]
+Li, et al.             Expires April 27, 2021                [Page 40]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -2103,7 +2101,7 @@ Internet-Draft          Intent Classification             October 2020
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 41]
+Li, et al.             Expires April 27, 2021                [Page 41]
 
 Internet-Draft          Intent Classification             October 2020
 
@@ -2156,5 +2154,5 @@ Authors' Addresses
 
 
 
-Li, et al.             Expires April 21, 2021                [Page 42]
+Li, et al.             Expires April 27, 2021                [Page 42]
 
