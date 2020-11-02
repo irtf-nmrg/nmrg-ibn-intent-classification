@@ -1,15 +1,15 @@
 Network Working Group                                            C. Li
 Internet Draft                                           China Telecom
-Intended status: Informational                                O. Havel
-Expires: May 2021                                               W. Liu
-                                                             A. Olariu
-                                                   Huawei Technologies
-                                                     P. Martinez-Julia
-                                                                  NICT
-                                                              J. Nobre
-                                                                 UFRGS
-                                                              D. Lopez
-                                                       Telefonica, I+D
+Intended status: Informational                               O. Havel
+Expires: May 2021                                             W. Liu
+                                                           A. Olariu
+                                                 Huawei Technologies
+                                                   P. Martinez-Julia
+                                                                 NICT
+                                                             J. Nobre
+                                                                UFRGS
+                                                             D. Lopez
+                                                     Telefonica, I+D
                                                       November 2, 2020
 
                            Intent Classification
@@ -37,7 +37,7 @@ Status of this Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 21, 2020.
+   This Internet-Draft will expire on May 2, 2020.
 
 Copyright Notice
 
@@ -110,11 +110,11 @@ Internet-Draft          Intent Classification            November 2020
 Table of Contents
 
 
-   1. Introduction ................................................. 3
-   2. Key Words .................................................... 5
-   3. Acronyms ..................................................... 5
-   4. Abstract Intent Requirements.................................. 7
-      4.1. What is Intent?.......................................... 7
+   1. Introduction ................................................ 3
+   2. Key Words ................................................... 5
+   3. Acronyms .................................................... 5
+   4. Abstract Intent Requirements................................. 7
+      4.1. What is Intent?......................................... 7
       4.2. Intent Solutions and Intent Users ....................... 8
       4.3. Current Problems and Requirements ....................... 9
       4.4. Intent Types that need to be supported ................. 10
@@ -142,7 +142,7 @@ Table of Contents
          6.5.2. Intent Categories ................................. 40
    7. Security Considerations ..................................... 42
    8. IANA Considerations ......................................... 42
-   9. Contributors ........,....................................... 42
+   9. Contributors ................................................ 42
    10. Acknowledgments ............................................ 42
    11. References ................................................. 42
       11.1. Normative References .................................. 42
@@ -1100,7 +1100,7 @@ Internet-Draft          Intent Classification            November 2020
 
 6.3. Intent Classification for Carrier Solution
 
-   6.3.1. Intent Users and Intent Types
+ Users and Intent Types
 
    The following table describes the Intent Users in Carrier Solutions
    and Intent Types with their descriptions for different intent users.
@@ -1294,23 +1294,23 @@ Li, et al.               Expires May 2, 2021                 [Page 25]
 Internet-Draft          Intent Classification            November 2020
 
 
-   6.3.2. Intent Categories
+ Categories
 
    The following are the proposed categories:
        Intent Scope: C1=Connectivity, C2=Security, C3=Application,
         C4=QoS
        Network Scope:
-           o                 Network Domain: C1=Radio Access, C2=Transport Access,
+           o Network Domain: C1=Radio Access, C2=Transport Access,
              C3=Transport Aggregation, C4=Transport Core, C5=Cloud Edge,
              C6=Cloud Core)
-           o                 Network Function (NF) Scope: C1=VNFs, C2=PNFs
+           o Network Function (NF) Scope: C1=VNFs, C2=PNFs
        Abstraction(ABS): C1=Technical(with technical feedback), C2=Non-
         technical (without technical feedback) see Section 5.2. .
        Life-cycle (L-C): C1=Persistent (Full life-cycle), C2=Transient
         (Short Lived)
 
 
-   6.3.3. Intent Classification Example
+ Classification Example
 
    This section depicts an example on how the methodology described in
    Section 6.1. can be used in order to classify intents introduced in
@@ -1327,17 +1327,18 @@ Internet-Draft          Intent Classification            November 2020
    Following the intent classification methodology described step-by-
    step in Section 6.1. , we identify the following:
 
-   1.           The Intent Solution is for the Carrier.
+   1. The Intent Solution is for the Carrier.
 
-   2.           The Intent User Type is the Network Operator for the slice intent,
+   2. The Intent User Type is the Network Operator for the slice intent,
       and the Service Operator for the service chain intent
 
-   3.           The Type of Intent, is a Network Service Intent for the slice
-      intent, and a Customer Service Intent for the service chain intent.
+   3. The Type of Intent, is a Network Service Intent for the slice
+      intent, and a Customer Service Intent for the service chain 
+      intent.
 
-   4.           The Intent Scopes are connectivity and application.
+   4. The Intent Scopes are connectivity and application.
 
-   5.           The Network Scope is a logical one.
+   5. The Network Scope is a logical one.
 
 
 
@@ -1347,10 +1348,10 @@ Li, et al.               Expires May 2, 2021                 [Page 26]
 Internet-Draft          Intent Classification            November 2020
 
 
-   6.           The Abstractions are with technical feedback for the slice intent,
+   6. The Abstractions are with technical feedback for the slice intent,
       and without technical feedback for the service chain intent
 
-   7.           The life-cycle is persistent.
+   7. The life-cycle is persistent.
 
 
 
@@ -1500,7 +1501,7 @@ Internet-Draft          Intent Classification            November 2020
 
 6.4. Intent Classification for Data Center Solutions
 
-   6.4.1. Intent Users and Intent Types
+ Users and Intent Types
 
    The following table describes the Intent Users in DCN Solutions and
    Intent Types with their descriptions for different intent users.
@@ -1702,29 +1703,29 @@ Internet-Draft          Intent Classification            November 2020
 
 
 
-   6.4.2. Intent Categories
+ Categories
 
    The following are the proposed categories:
        Intent Scope: C1=Connectivity, C2=Security, C3=Application,
         C4=QoS C5=Storage C6=Compute
        Network Scope
-           o                 Network Domain: DC Network
-           o                 DCN Network (DCN Net) Scope: C1=Logical, C2=Physical
-           o                 DCN Resource (DCN Res) Scope: C1=Virtual, C2=Physical
+           o Network Domain: DC Network
+           o DCN Network (DCN Net) Scope: C1=Logical, C2=Physical
+           o DCN Resource (DCN Res) Scope: C1=Virtual, C2=Physical
        Abstraction(ABS): C1=Technical(with technical feedback), C2=Non-
         technical (without technical feedback), see Section 5.2.
        Life-cycle (L-C): C1=Persistent (Full life-cycle), C2=Transient
         (Short Lived)
 
 
-   6.4.3. Intent Classification Example
+ Classification Example
 
    This section depicts an example on how the methodology described in
    Section 6.1. can be used in order to classify intents introduced in
-   the 'A Multi-Level Approach to IBN' PoC demonstration [WALTER]. The
+   the 'A Multi-Level Approach to IBN' PoC demonstration [POC-IBN]. The
    PoC considered two intents: slice intents and service chain intents.
 
-   In this PoC [WALTER], a slice intent expresses a request for a
+   In this PoC [POC-IBN], a slice intent expresses a request for a
    network slice with two types of components: a set of top layer
    virtual functions, and a set of virtual switches and/or routers of
    L2/L3 VNFs. A service chain intent expressed a request for a service
@@ -1734,17 +1735,17 @@ Internet-Draft          Intent Classification            November 2020
    Following the intent classification methodology described step-by-
    step in Section 6.1. , we identify the following:
 
-   1.           The Intent Solution is for the Data Center.
+   1. The Intent Solution is for the Data Center.
 
-   2.           The Intent User Type is the Cloud Administrator for the slice
+   2. The Intent User Type is the Cloud Administrator for the slice
       intent and service chain intent.
 
-   3.           The Type of Intent, is a Cloud Management intent, for the slice and
-      service chain intent.
+   3. The Type of Intent, is a Cloud Management intent, for the slice 
+      and service chain intent.
 
-   4.           The Intent Scopes are connectivity and application.
+   4. The Intent Scopes are connectivity and application.
 
-   5.           The Network Scope is a logical, and the resource scope is virtual.
+   5. The Network Scope is a logical, and the resource scope is virtual.
 
 
 
@@ -1753,11 +1754,11 @@ Li, et al.               Expires May 2, 2021                 [Page 34]
 
 Internet-Draft          Intent Classification            November 2020
 
-
-   6.           The Abstractions are with technical feedback for the slice intent,
+ 
+   6. The Abstractions are with technical feedback for the slice intent,
       and without technical feedback for the service chain intent
 
-   7.           The life-cycle is persistent.
+   7. The life-cycle is persistent.
 
 
 
@@ -1906,7 +1907,7 @@ Internet-Draft          Intent Classification            November 2020
 
 6.5. Intent Classification for Enterprise Solution
 
-   6.5.1. Intent Users and Intent Types
+ Users and Intent Types
 
    The following table describes the Intent Users in Enterprise
    Solutions and their Intent Types.
@@ -2023,7 +2024,7 @@ Internet-Draft          Intent Classification            November 2020
    |              |             |                                     |
    +--------------+-------------+-------------------------------------+
 
-   6.5.2. Intent Categories
+ Categories
 
    The following are the proposed categories:
        Intent Scope: C1=Connectivity, C2=Security, C3=Application,
