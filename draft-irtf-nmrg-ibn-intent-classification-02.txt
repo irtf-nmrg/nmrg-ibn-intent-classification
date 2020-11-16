@@ -37,7 +37,7 @@ Status of this Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 2, 2020.
+   This Internet-Draft will expire on May 16, 2020.
 
 Copyright Notice
 
@@ -1346,7 +1346,7 @@ Li, et al.              Expires May 16, 2021                 [Page 26]
 Internet-Draft          Intent Classification            November 2020
 
 
- Categories
+6.3.2. Intent Categories
 
    The following are the proposed categories:
        Intent Scope: C1=Connectivity, C2=Security, C3=Application,
@@ -1362,7 +1362,7 @@ Internet-Draft          Intent Classification            November 2020
         (Short Lived)
 
 
- Classification Example
+6.3.3. Intent Classification Example
 
    This section depicts an example on how the methodology described in
    Section 6.1. can be used in order to classify intents introduced in
@@ -1379,7 +1379,7 @@ Internet-Draft          Intent Classification            November 2020
    Following the intent classification methodology described step-by-
    step in Section 6.1. , we identify the following:
 
-   1. The Intent Solution is for the Carrier.
+   1. The Intent Solution is for the Carrier
 
    2. The Intent User Type is the Network Operator for the slice intent,
       and the Service Operator for the service chain intent
@@ -1553,7 +1553,7 @@ Internet-Draft          Intent Classification            November 2020
 
 6.4. Intent Classification for Data Center Solutions
 
- Users and Intent Types
+6.4.1. Intent Users and Intent Types
 
    The following table describes the Intent Users in DCN Solutions and
    Intent Types with their descriptions for different intent users.
@@ -1755,7 +1755,7 @@ Internet-Draft          Intent Classification            November 2020
 
 
 
- Categories
+6.4.2. Intent Categories
 
    The following are the proposed categories:
        Intent Scope: C1=Connectivity, C2=Security, C3=Application,
@@ -1770,7 +1770,7 @@ Internet-Draft          Intent Classification            November 2020
         (Short Lived)
 
 
- Classification Example
+6.4.3. Intent Classification Example
 
    This section depicts an example on how the methodology described in
    Section 6.1. can be used in order to classify intents introduced in
@@ -1959,7 +1959,7 @@ Internet-Draft          Intent Classification            November 2020
 
 6.5. Intent Classification for Enterprise Solution
 
- Users and Intent Types
+6.5.1. Intent Users and Intent Types
 
    The following table describes the Intent Users in Enterprise
    Solutions and their Intent Types.
@@ -2076,7 +2076,7 @@ Internet-Draft          Intent Classification            November 2020
    |              |             |                                     |
    +--------------+-------------+-------------------------------------+
 
- Categories
+6.5.2. Intent Categories
 
    The following are the proposed categories:
        Intent Scope: C1=Connectivity, C2=Security, C3=Application,
@@ -2182,7 +2182,7 @@ Internet-Draft          Intent Classification            November 2020
    Ciavaglia, Xiaolin Song, Alexander Clemm, Daniel King, Mehdi Bezahaf,
    Yehia Elkhatib, Pedro Andres Aranda Gutierrez.
 
-   We thank to Walter Cerroni, Barbara Martini, Molka Gharbaoui, Davide
+   We thank to Barbara Martini, Walter Cerroni, Molka Gharbaoui, Davide
    Borsatti, for contributing with their 'A multi-level approach to
    IBN' PoC demonstration a first attempt to adopt the intent
    classification methodology.
@@ -2264,12 +2264,11 @@ Internet-Draft          Intent Classification            November 2020
 
    [CLEMM]  A. Clemm, L. Ciavaglia, L. Granville, J. Tantsura, "Intent-
              Based Networking - Concepts and Overview", Work in
-             Progress, draft-irtf-nmrg-ibn-concepts-definitions-02, 
-             September 2020,
-             https://tools.ietf.org/html/draft-irtf-nmrg-ibn-concepts-
-             definitions-02
+             Progress, draft-irtf-nmrg-ibn-concepts-definitions-02,
+             September 2020, https://tools.ietf.org/html/draft-irtf-
+             nmrg-ibn-concepts-definitions-02
 
-   [POC-IBN] Walter Cerroni, Molka Gharbaoui, Barbara Martini, Davide
+   [POC-IBN] Barbara Martini, Walter Cerroni, Molka Gharbaoui, Davide
              Borsatti, "A multi-level approach to IBN", July 2020,
              https://www.ietf.org/proceedings/108/slides/slides-108-
              nmrg-ietf-108-hackathon-report-a-multi-level-approach-to-
