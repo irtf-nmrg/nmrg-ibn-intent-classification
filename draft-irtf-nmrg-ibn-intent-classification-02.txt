@@ -10,7 +10,7 @@ Expires: July 2021                                            W. Liu
                                                                 UFRGS
                                                              D. Lopez
                                                      Telefonica, I+D
-                                                       January 6, 2021
+                                                      January 11, 2021
 
                            Intent Classification
                 draft-irtf-nmrg-ibn-intent-classification-02
@@ -37,11 +37,11 @@ Status of this Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 16, 2020.
+   This Internet-Draft will expire on July 8, 2021.
 
 Copyright Notice
 
-   Copyright (c) 2020 IETF Trust and the persons identified as the
+   Copyright (c) 2021 IETF Trust and the persons identified as the
    document authors. All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -49,7 +49,7 @@ Copyright Notice
 
 
 
-Liu, et al.             Expires July 6, 2021                  [Page 1]
+Liu, et al.             Expires July 11, 2021                 [Page 1]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -102,7 +102,7 @@ Abstract
 
 
 
-Li, et al.              Expires July 6, 2021                  [Page 2]
+Li, et al.              Expires July 11, 2021                 [Page 2]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -116,12 +116,12 @@ Table of Contents
    4. Abstract Intent Requirements................................. 7
       4.1. What is Intent?......................................... 7
       4.2. Intent Solutions and Intent Users ....................... 8
-      4.3. Benefits of Intents to Respond to Network Requirements... 9
+      4.3. Benefits of Intents to Respond to Network Requirements.. 10
       4.4. Intent Types that need to be supported ................. 11
    5. Functional Characteristics and Behaviour .................... 13
       5.1. Abstracting Intent Operation........................... 13
       5.2. Intent User Types...................................... 14
-      5.3. Intent Scope .......................................... 14
+      5.3. Intent Scope .......................................... 15
       5.4. Intent Network Scope................................... 15
       5.5. Intent Abstraction..................................... 15
       5.6. Intent Life-cycle...................................... 16
@@ -156,7 +156,7 @@ Table of Contents
    on the network, without giving any instructions on how to do it. This
 
 
-Li, et al.              Expires July 6, 2021                  [Page 3]
+Li, et al.              Expires July 11, 2021                 [Page 3]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -210,7 +210,7 @@ Internet-Draft          Intent Classification             January 2021
 
 
 
-Li, et al.              Expires July 6, 2021                  [Page 4]
+Li, et al.              Expires July 11, 2021                 [Page 4]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -227,7 +227,7 @@ Internet-Draft          Intent Classification             January 2021
 
    This document mostly addresses intents in the context of network
    intents, however other types of intents are not excluded, as
-   presented in Section 4.4. and Section 6.2. .
+   presented in Section 5.4. and Section 7.2. .
 
      It is impossible to fully differentiate intents only by the
    common characteristics followed by concepts, terms and intentions.
@@ -239,11 +239,11 @@ Internet-Draft          Intent Classification             January 2021
    (PoCs), research initiatives, or open source projects.
 
      The scope of intent classification in this document includes
-   solutions, users and Intent types, and the initial classification
-   table is made according to this scope. This can be used to update
-   the classification tables by adding or removing different solutions,
-   users, or intent types to cater for future scenarios, applications
-   or domains.
+   solutions, users and intent types, and the initial classification
+   table is made according to this scope. The methodology presented can
+   be used to update the classification tables by adding or removing
+   different solutions, users, or intent types to cater for future
+   scenarios, applications or domains.
 
 
 2. Key Words
@@ -262,7 +262,7 @@ Internet-Draft          Intent Classification             January 2021
      CE: Customer Equipment
 
 
-Li, et al.              Expires July 6, 2021                  [Page 5]
+Li, et al.              Expires July 11, 2021                 [Page 5]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -309,7 +309,7 @@ Internet-Draft          Intent Classification             January 2021
      SD-WAN: Software-Defined Wide-Area Network
 
 
-Li, et al.              Expires July 6, 2021                  [Page 6]
+Li, et al.              Expires July 11, 2021                 [Page 6]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -327,19 +327,44 @@ Internet-Draft          Intent Classification             January 2021
 
      VNF:  Virtual Network Function
 
+4. Definitions
 
+   A common and shared understanding of terms and definitions related
+   to IBN is provided in [CLEMM], as follows:
 
-4. Abstract Intent Requirements
+       Intent: A set of operational goals that a network should meet
+        and outcomes that a network is supposed to deliver, defined in
+        a declarative manner without specifying how to achieve or
+        implement them.
+
+       Intent-Based Network: a network that can be managed using
+        intent.
+
+       Policy: A set of rules that governs the choices in behaviour of
+        a system.
+
+   Other definitions relevant to this draft, such as intent user,
+   intent scope, intent network scope, intent abstraction, intent
+   abstraction, and intent lifecycle are available in Section 6.
+
+5. Abstract Intent Requirements
 
    In order to understand the different intent requirements that would
    drive intent classification, we first need to understand what intent
    means for different intent users.
 
-4.1. What is Intent?
+5.1. What is Intent?
 
    The term Intent has become very widely used in the industry for
    different purposes, sometimes it is not even in agreement with SDO
    shared principles mentioned in the Introduction.
+
+
+
+Li, et al.              Expires July 11, 2021                 [Page 7]
+
+Internet-Draft          Intent Classification             January 2021
+
 
    Different stakeholders consider an intent to be an ECA policy, a GBP
    policy, a business policy, a network service, a customer service, a
@@ -359,13 +384,6 @@ Internet-Draft          Intent Classification             January 2021
 
    While it is easier for those familiar with different standards to
    understand what service, CFS, RFS, resource, policy continuum, ECA
-
-
-Li, et al.              Expires July 6, 2021                  [Page 7]
-
-Internet-Draft          Intent Classification             January 2021
-
-
    policy, declarative policy, abstract policy or intent policy is, it
    may be more difficult for the wider audience.
 
@@ -383,7 +401,7 @@ Internet-Draft          Intent Classification             January 2021
    classifications that could be understood by a wider audience. This
    would help us define intent interfaces, DSLs and models.
 
-4.2. Intent Solutions and Intent Users
+5.2. Intent Solutions and Intent Users
 
    Intent types are defined by all aspects that are required to profile
    different requirements to easily distinguish among them. However, in
@@ -391,6 +409,13 @@ Internet-Draft          Intent Classification             January 2021
    aspects, the Solution and Actor. They can be considered as the main
    keys to classify intents, as we can easily group requirements by
    Solution and Actor. On the one hand, different Solutions and Actors
+
+
+Li, et al.              Expires July 11, 2021                 [Page 8]
+
+Internet-Draft          Intent Classification             January 2021
+
+
    have different requirements, expectations and priorities for intent-
    driven networking. Therefore, Actors require different intent types,
    depending on their context, the so they participate in different use
@@ -400,20 +425,6 @@ Internet-Draft          Intent Classification             January 2021
    different networking concepts and technologies. The following are the
    solutions and intent users that intent-driven networking needs to
    support:
-
-
-
-
-
-
-
-
-
-
-Li, et al.              Expires July 6, 2021                  [Page 8]
-
-Internet-Draft          Intent Classification             January 2021
-
 
          +--------------------+------------------------------------+
          | Solutions          | Intent Users                       |
@@ -435,7 +446,7 @@ Internet-Draft          Intent Classification             January 2021
 
    These intent solutions and intent users represent a starting point
    for the classification and are expendable through the methodology
-   presented in Section 6.1. .
+   presented in Section 7.1. .
 
    o For carrier networks scenario, for example, if the end-users wants
       to watch high-definition video, then the intent is to convert the
@@ -447,6 +458,16 @@ Internet-Draft          Intent Classification             January 2021
       node/container below 50% and the maximum load of any network link
       below 70%.
 
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                 [Page 9]
+
+Internet-Draft          Intent Classification             January 2021
+
+
    o For Enterprise Networks scenario, enterprise administrators
       express their intent from an external client (application service
       provider). For example, when hosting a video conference, multiple
@@ -456,18 +477,11 @@ Internet-Draft          Intent Classification             January 2021
       should be synchronised within 50ms to reach the destination viewer
       for each conversation session.
 
-4.3. Benefits of Intents to Respond to Network Requirements
+5.3. Benefits of Intents to Respond to Network Requirements
 
    Current network APIs and CLIs are too complex because they are highly
    integrated with the low level concepts exposed by networks. More
    specifically, network solutions must determine which low level
-
-
-Li, et al.              Expires July 6, 2021                  [Page 9]
-
-Internet-Draft          Intent Classification             January 2021
-
-
    communication technologies (e.g. protocol) they will use and, even
    more specifically, they must deal with the network topology that
    supports such communication (e.g. structure of networks and sub-
@@ -499,6 +513,13 @@ o Can Host A talk to Host B?
 
 o Are there any loops in my network?
 
+
+
+Li, et al.              Expires July 11, 2021                [Page 10]
+
+Internet-Draft          Intent Classification             January 2021
+
+
 o Are Network A and Network B connected?
 
 o Can User A listen to communications between Users B and C?
@@ -513,13 +534,6 @@ o to be notified about the problem before the user is aware
 
 o automation of network/service recovery based on intent (self-healing,
       self-optimization)
-
-
-
-Li, et al.              Expires July 6, 2021                 [Page 10]
-
-Internet-Draft          Intent Classification             January 2021
-
 
 o to get suggestions about correction/optimization steps based on
       experience (historical data and behaviour)
@@ -549,10 +563,16 @@ o build their own network services with their own policies via simple
 o have their network services up and running based on intent and
       automation only, without any manual actions or maintenance
 
-4.4. Intent Types that need to be supported
+5.4. Intent Types that need to be supported
 
    The following intent types need to be supported, in order to address
    the requirements from different solutions and intent users:
+
+
+Li, et al.              Expires July 11, 2021                [Page 11]
+
+Internet-Draft          Intent Classification             January 2021
+
 
 o Customer service intent
 
@@ -566,14 +586,6 @@ o Network and Underlay Network service intent
 
      o   for intent driven network configuration, verification,
           correction and optimization
-
-
-
-
-Li, et al.              Expires July 6, 2021                 [Page 11]
-
-Internet-Draft          Intent Classification             January 2021
-
 
      o   for intent created and provided by the underlay network
           administrator
@@ -608,6 +620,14 @@ o Strategy intent
      o   For design models and policies for network and network service
           design
 
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 12]
+
+Internet-Draft          Intent Classification             January 2021
+
+
      o   For design workflows, models and policies for operational task
           intents
 
@@ -621,14 +641,6 @@ o Operational task intents
 
      o   For network software upgrades
 
-
-
-
-Li, et al.              Expires July 6, 2021                 [Page 12]
-
-Internet-Draft          Intent Classification             January 2021
-
-
      o   To automate any tasks that operators/administrator often
            perform
 
@@ -641,7 +653,7 @@ o Intents that affect other intents
           must continue to be continuously monitored and self-
           corrected/self-optimized.
 
-5. Functional Characteristics and Behaviour
+6. Functional Characteristics and Behaviour
 
    Intent can be used to operate immediately on a target (much like
    issuing a command), or whenever it is appropriate (e.g., in response
@@ -649,7 +661,7 @@ o Intents that affect other intents
    serve to further organize its purpose, as described by the following
    subsections.
 
-5.1. Abstracting Intent Operation
+6.1. Abstracting Intent Operation
 
    The modelling of Intents can be abstracted using the following
    three-tuple:
@@ -662,6 +674,14 @@ o Intents that affect other intents
 
     o Capabilities describe the functionality that the intent can
       perform.  Capabilities take different forms, depending on the
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 13]
+
+Internet-Draft          Intent Classification             January 2021
+
+
       expressivity of the intent as well as the programming paradigm(s)
       used.
 
@@ -673,17 +693,7 @@ o Intents that affect other intents
    intent should be used and how it operates, as well as prescribe any
    operational dependencies that must be taken into account.
 
-
-
-
-
-
-Li, et al.              Expires July 6, 2021                 [Page 13]
-
-Internet-Draft          Intent Classification             January 2021
-
-
-5.2. Intent User Types
+6.2. Intent User Types
 
    Intent user types, or intent actors as they are known in the area of
    declarative policy, represent the users that define and issue the
@@ -718,24 +728,24 @@ Internet-Draft          Intent Classification             January 2021
       network, but may not directly correspond to other views of other
       actors.
 
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 14]
+
+Internet-Draft          Intent Classification             January 2021
+
+
    o Management personnel, such as network operators, may have the
       knowledge of the underlying network. However, they may not
       understand the details of the applications and services of
       Customers and End-Users.
 
-5.3. Intent Scope
+6.3. Intent Scope
 
    Intent are used to manage the behaviour of the networks they are
    applied to and all intents are applied within a specific scope, such
    as:
-
-
-
-
-Li, et al.              Expires July 6, 2021                 [Page 14]
-
-Internet-Draft          Intent Classification             January 2021
-
 
    o Connectivity scope, if the intent creates or modifies a
       connection.
@@ -747,10 +757,10 @@ Internet-Draft          Intent Classification             January 2021
       the network.
 
    These intent scopes are expendable through the methodology presented
-   in Section 6.1. .
+   in Section 7.1. .
 
 
-5.4. Intent Network Scope
+6.4. Intent Network Scope
 
    Regardless on the intent user type, their intent request is affecting
    the network, or network components, which are representing the intent
@@ -761,13 +771,22 @@ Internet-Draft          Intent Classification             January 2021
    Elements, Campus networks, SD-WAN networks, radio access networks,
    cloud edge, cloud core, branch, etc.
 
-5.5. Intent Abstraction
+6.5. Intent Abstraction
 
    Intent can be classified by whether it is necessary to feedback
    technical network information or non-technical information to the
    intended proponent after the intent is executed. As well, intent
    abstraction covers the level of technical details in the intent
    itself.
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 15]
+
+Internet-Draft          Intent Classification             January 2021
+
 
    o For ordinary users, they do not care how the intent is executed,
       or the details of the network. As a result, they do not need to
@@ -776,18 +795,6 @@ Internet-Draft          Intent Classification             January 2021
       goal, and the execution effect such as the quality of completion
       and the length of execution. In this scenario, we refer to an
       abstraction without technical feedback.
-
-
-
-
-
-
-
-
-Li, et al.              Expires July 6, 2021                 [Page 15]
-
-Internet-Draft          Intent Classification             January 2021
-
 
    o For administrators, such as network administrators, they perform
       intents, such as allocating network resources, selecting
@@ -803,7 +810,7 @@ Internet-Draft          Intent Classification             January 2021
 
 
 
-5.6. Intent Life-cycle
+6.6. Intent Life-cycle
 
    Intents can be classified into transient and persistent intents:
 
@@ -816,7 +823,7 @@ Internet-Draft          Intent Classification             January 2021
       keep all relevant intents active until they are deactivated or
       removed.
 
-5.7. Hierarchy
+6.7. Hierarchy
 
    In different phases of the autonomous driving network [TMF-auto], the
    intents are different. A typical example of autonomous driving
@@ -825,6 +832,15 @@ Internet-Draft          Intent Classification             January 2021
    o Level 0 - Traditional manual network: O&M personnel manually
       control the network and obtain network alarms and logs. - No
       intent
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 16]
+
+Internet-Draft          Intent Classification             January 2021
+
 
    o Level 1 - Partially automated network: Automated scripts are used
       to automate service provisioning, network deployment, and
@@ -835,13 +851,6 @@ Internet-Draft          Intent Classification             January 2021
       provisioning, network deployment, and maintenance comprehensive
       perception of network status and local machine decision making; -
       simple intent on service provisioning
-
-
-
-Li, et al.              Expires July 6, 2021                 [Page 16]
-
-Internet-Draft          Intent Classification             January 2021
-
 
    o Level 3 - Self-optimization network: Deep awareness of network
       status and automatic network control, meeting users' network
@@ -855,7 +864,7 @@ Internet-Draft          Intent Classification             January 2021
       and network conditions, the network can automatically adapt to and
       adjust to meet people's intentions. - Intent based on AI
 
-6. Intent Classification
+7. Intent Classification
 
    This chapter proposes an intent classification approach that may help
    to classify mainstream intent related demos/tools.
@@ -880,6 +889,13 @@ Internet-Draft          Intent Classification             January 2021
    The output of the intent classification is the intent taxonomy
    introduced in the next sections.
 
+
+
+Li, et al.              Expires July 11, 2021                [Page 17]
+
+Internet-Draft          Intent Classification             January 2021
+
+
    Thus, this section first introduces the proposed intent
    classification methodology, followed by consolidated intent taxonomy
    for three intent solutions, and then by concrete examples of intent
@@ -888,16 +904,7 @@ Internet-Draft          Intent Classification             January 2021
    proposed methodology and then can be filled in for PoCs, demos,
    research projects or future drafts.
 
-
-
-
-
-Li, et al.              Expires July 6, 2021                 [Page 17]
-
-Internet-Draft          Intent Classification             January 2021
-
-
-6.1. Intent Classification Methodology
+7.1. Intent Classification Methodology
 
    This section describes the methodology used to derive the initial
    classification proposed in the draft. The proposed methodology can be
@@ -933,6 +940,13 @@ Internet-Draft          Intent Classification             January 2021
    classification and use/add/remove the identified intent scope (R4-
    U4).
 
+
+Li, et al.              Expires July 11, 2021                [Page 18]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+
    5. The next step is to identify the network scope (e.g. Campus, Radio
    Access) and then then review existing classification and either use
    it or add/remove the identified network scope (R5-U5).
@@ -940,12 +954,6 @@ Internet-Draft          Intent Classification             January 2021
    6. The next phase is to identify the abstractions (e.g. technical,
    non-technical) and then review existing classification and
    use/add/remove the abstractions (R6-U6).
-
-
-Li, et al.              Expires July 6, 2021                 [Page 18]
-
-Internet-Draft          Intent Classification             January 2021
-
 
    7. The seventh step is to identify the life-cycle requirements (e.g.
    persistent, transient) and then review existing classification and
@@ -985,17 +993,7 @@ Internet-Draft          Intent Classification             January 2021
 
 
 
-
-
-
-
-
-
-
-
-
-
-Li, et al.              Expires July 6, 2021                 [Page 19]
+Li, et al.              Expires July 11, 2021                [Page 19]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -1043,12 +1041,12 @@ Internet-Draft          Intent Classification             January 2021
                       +------------------+
 
 
-Li, et al.              Expires July 6, 2021                 [Page 20]
+Li, et al.              Expires July 11, 2021                [Page 20]
 
 Internet-Draft          Intent Classification             January 2021
 
 
-6.2. Intent Taxonomy
+7.2. Intent Taxonomy
 
    The following taxonomy describes the various intent solutions, intent
    user types, intent types, intent scopes, network scopes, abstractions
@@ -1096,7 +1094,7 @@ Internet-Draft          Intent Classification             January 2021
 
 
 
-Li, et al.              Expires July 6, 2021                 [Page 21]
+Li, et al.              Expires July 11, 2021                [Page 21]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -1144,14 +1142,14 @@ Internet-Draft          Intent Classification             January 2021
                                    +--------------------------------+
 
 
-Li, et al.              Expires July 6, 2021                 [Page 22]
+Li, et al.              Expires July 11, 2021                [Page 22]
 
 Internet-Draft          Intent Classification             January 2021
 
 
-6.3. Intent Classification for Carrier Solution
+7.3. Intent Classification for Carrier Solution
 
-6.3.1. Intent Users and Intent Types
+7.3.1. Intent Users and Intent Types
 
    The following table describes the Intent Users in Carrier Solutions
    and Intent Types with their descriptions for different intent users.
@@ -1193,7 +1191,7 @@ Internet-Draft          Intent Classification             January 2021
    |             |             |configurations (switches, routers,     |
 
 
-Li, et al.              Expires July 6, 2021                 [Page 23]
+Li, et al.              Expires July 11, 2021                [Page 23]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -1243,7 +1241,7 @@ Internet-Draft          Intent Classification             January 2021
 
 
 
-Li, et al.              Expires July 6, 2021                 [Page 24]
+Li, et al.              Expires July 11, 2021                [Page 24]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -1291,7 +1289,7 @@ Internet-Draft          Intent Classification             January 2021
 
 
 
-Li, et al.              Expires July 6, 2021                 [Page 25]
+Li, et al.              Expires July 11, 2021                [Page 25]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -1340,31 +1338,31 @@ Internet-Draft          Intent Classification             January 2021
 
 
 
-Li, et al.              Expires July 6, 2021                 [Page 26]
+Li, et al.              Expires July 11, 2021                [Page 26]
 
 Internet-Draft          Intent Classification             January 2021
 
 
-6.3.2. Intent Categories
+7.3.2. Intent Categories
 
    The following are the proposed categories:
        Intent Scope: C1=Connectivity, C2=Security, C3=Application,
         C4=QoS
        Network Scope:
-           o Network Domain: C1=Radio Access, C2=Transport Access,
+           oNetwork Domain: C1=Radio Access, C2=Transport Access,
              C3=Transport Aggregation, C4=Transport Core, C5=Cloud Edge,
              C6=Cloud Core)
-           o Network Function (NF) Scope: C1=VNFs, C2=PNFs
+           oNetwork Function (NF) Scope: C1=VNFs, C2=PNFs
        Abstraction(ABS): C1=Technical(with technical feedback), C2=Non-
-        technical (without technical feedback) see Section 5.2. .
+        technical (without technical feedback) see Section 6.2. .
        Life-cycle (L-C): C1=Persistent (Full life-cycle), C2=Transient
         (Short Lived)
 
 
-6.3.3. Intent Classification Example
+7.3.3. Intent Classification Example
 
    This section depicts an example on how the methodology described in
-   Section 6.1. can be used in order to classify intents introduced in
+   Section 7.1. can be used in order to classify intents introduced in
    the 'A Multi-Level Approach to IBN' PoC demonstration [POC-IBN]. The
    PoC considered two intents: slice intents and service chain intents.
 
@@ -1376,32 +1374,32 @@ Internet-Draft          Intent Classification             January 2021
    virtual functions.
 
    Following the intent classification methodology described step-by-
-   step in Section 6.1. , we identify the following:
+   step in Section 7.1. , we identify the following:
 
-   1. The Intent Solution is for the Carrier
+   1.The Intent Solution is for the Carrier
 
-   2. The Intent User Type is the Network Operator for the slice intent,
+   2.The Intent User Type is the Network Operator for the slice intent,
       and the Service Operator for the service chain intent
 
-   3. The Type of Intent, is a Network Service Intent for the slice
+   3.The Type of Intent, is a Network Service Intent for the slice
       intent,and a Customer Service Intent for the service chain intent.
 
-   4. The Intent Scopes are connectivity and application.
+   4.The Intent Scopes are connectivity and application.
 
-   5. The Network Scope is VNF, Cloud Edge, and Cloud Core.
-
-
+   5.The Network Scope is VNF, Cloud Edge, and Cloud Core.
 
 
-Li, et al.              Expires July 6, 2021                 [Page 27]
+
+
+Li, et al.              Expires July 11, 2021                [Page 27]
 
 Internet-Draft          Intent Classification             January 2021
 
 
-   6. The Abstractions are with technical feedback for the slice intent,
+   6.The Abstractions are with technical feedback for the slice intent,
       and without technical feedback for the service chain intent
 
-   7. The life-cycle is persistent.
+   7.The life-cycle is persistent.
 
 
 
@@ -1445,7 +1443,7 @@ Internet-Draft          Intent Classification             January 2021
 
 
 
-Li, et al.              Expires July 6, 2021                 [Page 28]
+Li, et al.              Expires July 11, 2021                [Page 28]
 
 Internet-Draft          Intent Classification             January 2021
 
@@ -1493,5 +1491,874 @@ Internet-Draft          Intent Classification             January 2021
 +---------+---------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
 
 
-Li, et al.              Expires July 6, 2021                 [Page 29]
+Li, et al.              Expires July 11, 2021                [Page 29]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+|App      |Customer |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|Developer|Intent   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|         +---------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+|         |Network  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|         |Service  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|         |Intent   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|         +---------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+|         |Network  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|         |Intent   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|         +---------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+|         |Op Task  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|         |Intent   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|         +---------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+|         |Strategy |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|         |Intent   |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
++---------+---------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 30]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+7.4. Intent Classification for Data Center Solutions
+
+7.4.1. Intent Users and Intent Types
+
+   The following table describes the Intent Users in DCN Solutions and
+   Intent Types with their descriptions for different intent users.
+
+   +---------------+-------------+-------------------------------------+
+   | Intent User   | Intent Type |    Intent Type Description          |
+   +-------------------------------------------------------------------+
+   | Customer /    | Customer    | Customer Self-Service via Tenant    |
+   | Tenants       | Service     | Portal, Customers may have multiple |
+   |               | Intent      | type of end-users.                  |
+   |               |             | Example: Request GPU computing and  |
+   |               |             | storage resources to meet 10k video |
+   |               |             | surveillance services.              |
+   |               +---------------------------------------------------+
+   |               | Strategy    | This includes models and policy     |
+   |               | Intent      | intents designed by Customers/      |
+   |               |             | Tenants to be used by Customer and  |
+   |               |             | End-User Intents.                   |
+   |               |             | Example: Request dynamic computing  |
+   |               |             | and storage resources of the service|
+   |               |             | in special and daily times.         |
+   |               |             |                                     |
+   +-------------------------------------------------------------------+
+   |               | Cloud       | Configuration of VMs, DB Servers,   |
+   | Cloud         | Management  | App Servers, Connectivity,          |
+   | Administrator | Intent      | Communication between VMs.          |
+   |               |             | Example: Request connectivity       |
+   |               |             | between VMs A,B,and C in Network N1.|
+   |               +---------------------------------------------------+
+   |               | Cloud       | Policy-driven self-configuration and|
+   |               | Resource    | and recovery / optimization         |
+   |               | Management  | Example: Request automatic life     |
+   |               | Intent      |-cycle management of VM cloud        |
+   |               |             | resources.                          |
+   |               +---------------------------------------------------+
+   |               | Operational | Cloud Administrator requests        |
+   |               | Task Intent | execution of any automated task     |
+   |               |             | other than Cloud Management         |
+   |               |             | Intents and Cloud Resource          |
+   |               |             | Management Intents.                 |
+   |               |             | Example: Request upgrade operating  |
+   |               |             | system to version X on all VMs      |
+   |               |             | in Network N1.                      |
+
+
+Li, et al.              Expires July 11, 2021                [Page 31]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   |               |             |Operational statement: an intent to  |
+   |               |             |update a system might reconfigure the|
+   |               |             |system topology (connect to a service|
+   |               |             |and to peers), exchange data (update |
+   |               |             |the content), and uphold a certain   |
+   |               |             |QoE level (allocate sufficient       |
+   |               |             |network resources). The network,thus,|
+   |               |             |carries out the necessary            |
+   |               |             |configuration to best serve such an  |
+   |               |             |intent; e.g. setting up direct       |
+   |               |             |connections between terminals, and   |
+   |               |             |allocating fair shares of router     |
+   |               |             |queues considering other network     |
+   |               |             |services.
+   |               +---------------------------------------------------+
+   |               | Strategy    | Cloud Administrator designs models, |
+   |               | Intent      | policy intents and workflows to be  |
+   |               |             | used by other intents. Automate any |
+   |               |             | tasks that Administrator often      |
+   |               |             | performs, in addition to life-cycle |
+   |               |             | of Cloud Management Intents and     |
+   |               |             | Cloud Management Resource Intents.  |
+   |               |             | Example: In case of emergency,      |
+   |               |             | automatically migrate all cloud     |
+   |               |             | resources to DC2.                   |
+   +---------------+---------------------------------------------------+
+   | Underlay      | Underlay    | Service created and provided by     |
+   | Network       | Network     | the Underlay Network Administrator. |
+   | Administrator | Service     | Example: Request underlay service   |
+   |               | Intent      | between DC1 and DC2 with            |
+   |               |             | bandwidth B.                        |
+   |               +---------------------------------------------------+
+   |               | Underlay    | Underlay Network Administrator      |
+   |               | Network     | requests some DCN-wide underlay     |
+   |               | Intent      | network configuration or network    |
+   |               |             | resource configurations.            |
+   |               |             | Example: Establish and allocate     |
+   |               |             | DHCP address pool.                  |
+   |               +---------------------------------------------------+
+   |               | Operational | Underlay Network Administrator      |
+   |               | Task Intent | requests execution of the any       |
+   |               |             | automated task other than Underlay  |
+   |               |             | Network Service and Resource        |
+
+
+Li, et al.              Expires July 11, 2021                [Page 32]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   |               |             | Intent.                             |
+   |               |             | Example: Request automatic rapid    |
+   |               |             | detection of device failures and    |
+   |               |             | pre-alarm correlation.              |
+   |               +---------------------------------------------------+
+   |               | Strategy    | Underlay Network Administrator      |
+   |               | Intent      | designs models, policy intents &    |
+   |               |             | workflows to be used by other       |
+   |               |             | intents. Automate any tasks that    |
+   |               |             | Administrator often performs        |
+   |               |             | Example: For all traffic flows      |
+   |               |             | that need NFV service chaining,     |
+   |               |             | restrict the maximum load of any    |
+   |               |             | VNF node/container below 50% and    |
+   |               |             | the maximum load of any network     |
+   |               |             | link below 70%.                     |
+   +-------------------------------------------------------------------+
+   |               | Cloud       | Cloud Management Intent API         |
+   |               | Management  | provided to the Application         |
+   |               | Intent      | Developers.                         |
+   |               |             | Example: API to request             |
+   |               |             | configuration of VMs,or DB Servers  |
+   | Application   +---------------------------------------------------+
+   | Developer     | Cloud       | Cloud Resource Management Intent    |
+   |               | Resource    | API provided to the Application     |
+   |               | Management  | Developers.                         |
+   |               | Intent      | Example: API to request automatic   |
+   |               |             | life-cycle management of cloud      |
+   |               |             | resources.                          |
+   |               +---------------------------------------------------+
+   |               | Underlay    | Underlay Network Service API        |
+   |               | Network     | provided to the Application         |
+   |               | Service     | Developers.                         |
+   |               | Intent      | Example: API to request real-time   |
+   |               |             | monitoring of device condition.     |
+   |               +---------------------------------------------------+
+   |               | Underlay    | Underlay Network Resource API       |
+   |               | Network     | provided to the Application         |
+   |               | Intent      | Developers.                         |
+   |               |             | Example: API to request dynamic     |
+   |               |             | management of IPv4 address pool     |
+   |               |             | resources.                          |
+
+
+Li, et al.              Expires July 11, 2021                [Page 33]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   |               |             |                                     |
+   |               +---------------------------------------------------+
+   |               | Operational | Operational Task Intent API         |
+   |               | Task Intent | provided to the trusted             |
+   |               |             | Application Developer (internal     |
+   |               |             | DevOps).                            |
+   |               |             | Example: API to request automatic   |
+   |               |             | rapid detection of device failures  |
+   |               |             | and pre-alarm correlation           |
+   |               |             |                                     |
+   |               +---------------------------------------------------+
+   |               | Strategy    | Application Developer designs       |
+   |               | Intent      | models, policy intents and          |
+   |               |             | building blocks to be used by       |
+   |               |             | other intents. This is for the      |
+   |               |             | trusted internal DCN DevOps.        |
+   |               |             | Example: API to request load        |
+   |               |             | balancing thresholds.               |
+   +---------------+-------------+-------------------------------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 34]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+
+7.4.2. Intent Categories
+
+   The following are the proposed categories:
+       Intent Scope: C1=Connectivity, C2=Security, C3=Application,
+        C4=QoS C5=Storage C6=Compute
+       Network Scope
+           oNetwork Domain: DC Network
+           oDCN Network (DCN Net) Scope: C1=Logical, C2=Physical
+           oDCN Resource (DCN Res) Scope: C1=Virtual, C2=Physical
+       Abstraction(ABS): C1=Technical(with technical feedback), C2=Non-
+        technical (without technical feedback), see Section 6.2.
+       Life-cycle (L-C): C1=Persistent (Full life-cycle), C2=Transient
+        (Short Lived)
+
+
+7.4.3. Intent Classification Example
+
+   This section depicts an example on how the methodology described in
+   Section 7.1. can be used in order to classify intents introduced in
+   the 'A Multi-Level Approach to IBN' PoC demonstration [POC-IBN]. The
+   PoC considered two intents: slice intents and service chain intents.
+
+   In this PoC [POC-IBN], a slice intent expresses a request for a
+   network slice with two types of components: a set of top layer
+   virtual functions, and a set of virtual switches and/or routers of
+   L2/L3 VNFs. A service chain intent expressed a request for a service
+   operated through a chain of service components running in L4-L7
+   virtual functions.
+
+   Following the intent classification methodology described step-by-
+   step in Section 7.1. , we identify the following:
+
+   1.The Intent Solution is for the Data Center.
+
+   2.The Intent User Type is the Cloud Administrator for the slice
+      intent and service chain intent.
+
+   3.The Type of Intent, is a Cloud Management intent, for the slice and
+      service chain intent.
+
+   4.The Intent Scopes are connectivity and application.
+
+   5.The Network Scope is a logical, and the resource scope is virtual.
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 35]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   6.The Abstractions are with technical feedback for the slice intent,
+      and without technical feedback for the service chain intent
+
+   7.The life-cycle is persistent.
+
+
+
+   The following table shows how to represent this information in a
+   tabular form, where the 'X' in the table refers to the slice and
+   service chain intent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 36]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   +---------+-------------+-----------------+-----+-----+-----+-----+
+   |Intent   | Intent      | Intent          | DCN | DCN | ABS | L-C |
+   |User     | Type        | Scope           | Res | Net |     |     |
+   |         |             +-----------------+-----+-----+-----+-----+
+   |         |             |C1|C2|C3|C4|C5|C6|C1|C2|C1|C2|C1|C2|C1|C2|
+   +---------+-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |Customer | Customer    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |/Tenants | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Strategy    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   +---------+-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   | Cloud   | Cloud       |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   | Admin   | Management  |X |  |X |  |  |  |X |  |X |  |X |X |X |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Cloud       |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Resource    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Management  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Operational |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Task Intent |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Strategy    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   +---------+-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |Underlay | Underlay    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |Network  | Network     |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |Admin    | Service     |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Underlay    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Network     |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Resource    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Operational |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Task Intent |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Strategy    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+
+Li, et al.              Expires July 11, 2021                [Page 37]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   +---------+-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |App      | Cloud       |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |Developer| Management  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Cloud       |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Resource    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Management  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Underlay    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Network     |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Service     |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Underlay    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Network     |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Resource    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Operational |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Task Intent |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         +-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+   |         | Strategy    |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   |         | Intent      |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+   +---------+-------------+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 38]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+7.5. Intent Classification for Enterprise Solution
+
+7.5.1. Intent Users and Intent Types
+
+   The following table describes the Intent Users in Enterprise
+   Solutions and their Intent Types.
+
+   +--------------+-------------+-------------------------------------+
+   | Intent User  | Intent Type |    Intent Type Description          |
+   +--------------+---------------------------------------------------+
+   | End-User     | Customer    | Enterprise End-User Self-Service or |
+   |              | Service     | Applications, Enterprise may have   |
+   |              | Intent      | multiple types of End-Users.        |
+   |              |             | Example: Request access to VPN      |
+   |              |             | service.                            |
+   |              |             | Request video conference between    |
+   |              |             | user A and B.                       |
+   |              +---------------------------------------------------+
+   |              | Strategy    | This includes models and policy     |
+   |              | Intent      | intents designed by End-Users to be |
+   |              |             | used by End-User Intents and their  |
+   |              |             | Applications.                       |
+   |              |             | Example: Create a video conference  |
+   |              |             | type for a weekly meeting.          |
+   +------------------------------------------------------------------+
+   |Administrator | Network     | Service provided by the             |
+   | (internal or | Service     | Administrator to the End-Users      |
+   | MSP)         | Intent      | and their Applications.             |
+   |              |             | Example: For any user of application|
+   |              |             | X, the arrival time of hologram     |
+   |              |             | objects of all the remote tele-     |
+   |              |             | presenters should be synchronised   |
+   |              |             | within 50ms to reach the destination|
+   |              |             | viewer for each conversation session|
+   |              |             | Create management VPN connectivity  |
+   |              |             | for type of service A.              |
+   |              |             | Operational statement: The job of   |
+   |              |             | the network layer is to ensure that |
+   |              |             | the delay is between 50-70ms through|
+   |              |             | the routing algorithm. At the same  |
+   |              |             | time,the node resources need to meet|
+   |              |             | the bandwidth requirements of 4K    |
+
+
+Li, et al.              Expires July 11, 2021                [Page 39]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   |              |             | video conferences.                  |
+   +------------------------------------------------------------------+
+   |              | Network     | Administrator requires network wide |
+   |              | Intent      | configuration (e.g. underlay,       |
+   |              |             | campus) or resource configuration   |
+   |              |             | (switches, routers, policies).      |
+   |              |             | Example: Configure switches in      |
+   |              |             | campus network 1 to prioritise      |
+   |              |             | traffic of type A.                  |
+   |              |             | Configure Youtube as business       |
+   |              |             | non-relevant.                       |
+   |              +---------------------------------------------------+
+   |              | Operational | Administrator requests execution of |
+   |              | Task Intent | any automated task other than       |
+   |              |             | Network Service Intents and Network |
+   |              |             | Intents.                            |
+   |              |             | Example: Request network security   |
+   |              |             | automated tasks such as Web         |
+   |              |             | filtering and DDOS cloud protection.|
+   |              +---------------------------------------------------+
+   |              | Strategy    | Administrator designs models, policy|
+   |              | Intent      | intents and workflows to be used by |
+   |              |             | other intents. Automate any tasks   |
+   |              |             | that Administrator often performs.  |
+   |              |             | Example: In case of emergency,      |
+   |              |             | automatically shift all traffic of  |
+   |              |             | type A through network N.           |
+   |              |             |                                     |
+   +--------------+-------------+-------------------------------------+
+   | Application  | End-User    | End-User Service / Application      |
+   | Developer    | Intent      | Intent API provided to the          |
+   |              |             | Application Developers.             |
+   |              |             | Example: API for request to open a  |
+   |              |             | VPN service.                        |
+   |              +---------------------------------------------------+
+   |              | Network     | Network Service API Provided to     |
+   |              | Service     | Application Developers.             |
+   |              | Intent      | Example: API for request network    |
+   |              |             | bandwidth and latency for           |
+   |              |             | hosting video conference.           |
+   |              +---------------------------------------------------+
+
+
+Li, et al.              Expires July 11, 2021                [Page 40]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   |              | Network     | Network API Provided to Application |
+   |              | Intent      | Developers.                         |
+   |              |             | Example: API for request of network |
+   |              |             | devices configuration.              |
+   |              +---------------------------------------------------+
+   |              | Operational | Operational Task Intent API provided|
+   |              | Task Intent | to the trusted Application Developer|
+   |              |             | (internal DevOps).                  |
+   |              |             | Example: API for requesting         |
+   |              |             | automatic monitoring and            |
+   |              |             | interception for network security   |
+   |              +---------------------------------------------------+
+   |              | Strategy    | Application Developer designs       |
+   |              | Intent      | models, policy intents and building |
+   |              |             | blocks to be used by other intents. |
+   |              |             | This is for the trusted internal    |
+   |              |             | DevOps.                             |
+   |              |             | Example: API for strategy intent in |
+   |              |             | case of emergencies.                |
+   |              |             |                                     |
+   +--------------+-------------+-------------------------------------+
+
+7.5.2. Intent Categories
+
+   The following are the proposed categories:
+       Intent Scope: C1=Connectivity, C2=Security, C3=Application,
+        C4=QoS
+       Network (Net) Scope: C1=Campus, C2=Branch, C3=SD-WAN
+       Abstraction(ABS): C1=Technical(with technical feedback), C2=Non-
+        technical (without technical feedback), see Section 6.2.
+       Life-cycle (L-C): C1=Persistent (Full life-cycle), C2=Transient
+        (Short Lived)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 41]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+
+
+   The following is the Intent Classification Table Example for
+   Enterprise Solutions.
+
+   +---------------+-------------+-----------+--------+-----+-----+
+   | Intent User   | Intent Type | Intent    | Net    | ABS | L-C |
+   |               |             | Scope     |        |     |     |
+   |               |             +-----------+--------+-----+-----+
+   |               |             |C1|C2|C3|C4|C1|C2|C3|C1|C2|C1|C2|
+   +---------------+-------------+--+--+--+--+--+--+--+--+--+--+--+
+   | End-User      | End-User    |  |  |  |  |  |  |  |  |  |  |  |
+   |               | Intent      |  |  |  |  |  |  |  |  |  |  |  |
+   |               +-------------+--+--+--+--+--+--+--+--+--+--+--+
+   |               | Strategy    |  |  |  |  |  |  |  |  |  |  |  |
+   |               | Intent      |  |  |  |  |  |  |  |  |  |  |  |
+   +---------------+-------------+--+--+--+--+--+--+--+--+--+--+--+
+   | Enterprise    | Network     |  |  |  |  |  |  |  |  |  |  |  |
+   | Administrator | Intent      |  |  |  |  |  |  |  |  |  |  |  |
+   |               +-------------+--+--+--+--+--+--+--+--+--+--+--+
+   |               | Strategy    |  |  |  |  |  |  |  |  |  |  |  |
+   |               | Intent      |  |  |  |  |  |  |  |  |  |  |  |
+   +---------------+-------------+--+--+--+--+--+--+--+--+--+--+--+
+   | Application   | End-User    |  |  |  |  |  |  |  |  |  |  |  |
+   | Developer     | Intent      |  |  |  |  |  |  |  |  |  |  |  |
+   |               +-------------+--+--+--+--+--+--+--+--+--+--+--+
+   |               | Network     |  |  |  |  |  |  |  |  |  |  |  |
+   |               | Service     |  |  |  |  |  |  |  |  |  |  |  |
+   |               | Intent      |  |  |  |  |  |  |  |  |  |  |  |
+   |               +-------------+--+--+--+--+--+--+--+--+--+--+--+
+   |               | Network     |  |  |  |  |  |  |  |  |  |  |  |
+   |               | Intent      |  |  |  |  |  |  |  |  |  |  |  |
+   |               +-------------+--+--+--+--+--+--+--+--+--+--+--+
+   |               | Operational |  |  |  |  |  |  |  |  |  |  |  |
+   |               | Task        |  |  |  |  |  |  |  |  |  |  |  |
+   |               | Intent      |  |  |  |  |  |  |  |  |  |  |  |
+   |               +-------------+--+--+--+--+--+--+--+--+--+--+--+
+   |               | Strategy    |  |  |  |  |  |  |  |  |  |  |  |
+   |               | Intent      |  |  |  |  |  |  |  |  |  |  |  |
+   +---------------+-------------+--+--+--+--+--+--+--+--+--+--+--+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 42]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+8. Security Considerations
+
+   This document does not have any Security Considerations.
+
+9. IANA Considerations
+
+   This document has no actions for IANA.
+
+10. Contributors
+
+   The following people all contributed to creating this document,
+   listed in alphabetical order:
+
+   Ying Chen, China Unicom
+   Richard Meade, Huawei
+   John Strassner, Huawei
+   Xueyuan Sun, China Telecom
+   Weiping Xu, Huawei
+
+
+11. Acknowledgments
+
+   This document has benefited from reviews, suggestions, comments and
+   proposed text provided by the following members, listed in
+   alphabetical order: Brian E Carpenter, Juergen Schoenwaelder, Laurent
+   Ciavaglia, Xiaolin Song, Alexander Clemm, Daniel King, Mehdi Bezahaf,
+   Yehia Elkhatib, Pedro Andres Aranda Gutierrez.
+
+   We thank to Barbara Martini, Walter Cerroni, Molka Gharbaoui, Davide
+   Borsatti, for contributing with their 'A multi-level approach to
+   IBN' PoC demonstration a first attempt to adopt the intent
+   classification methodology.
+
+12. References
+
+12.1. Normative References
+
+   [RFC2119] Bradner, S., "Key words for use in RFCs to Indicate
+             Requirement Levels", BCP 14, RFC 2119, March 1997.
+
+   [RFC7575] Behringer, M., Pritikin, M., Bjarnason, S., Clemm, A.,
+             Carpenter, B., Jiang, S., and L. Ciavaglia, "Autonomic
+             Networking: Definitions and Design Goals", RFC 7575, June
+             2015.
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 43]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   [RFC8328] Liu, W., Xie, C., Strassner, J., Karagiannis, G., Klyus,
+             M., Bi, J., Cheng, Y., and D. Zhang, "Policy-Based
+             Management Framework for the Simplified Use of Policy
+             Abstractions (SUPA)", March 2018.
+
+   [RFC3198] Westerinen, A., Schnizlein, J., Strassner, J.,
+             Scherling, M., Quinn, B., Herzog, S., Huynh, A., Carlson,
+             M., Perry, J., Waldbusser, S., "Terminology for Intent-
+             driven Management", RFC 3198, November 2001.
+
+12.2. Informative References
+
+   [RFC6020] Bjorklund, M., "YANG - A Data Modeling Language for the
+             Network Configuration Protocol (NETCONF)", RFC 6020,
+             October 2010.
+
+   [RFC7285] R. Alimi, R. Penno, Y. Yang, S. Kiesel, S. Previdi, W.
+             Roome, S. Shalunov, R. Woundy "Application-Layer Traffic
+             Optimization (ALTO) Protocol", September 2014.
+
+   [ANIMA] Du, Z., "ANIMA Intent Policy and Format", 2017,
+             <https://datatracker.ietf.org/doc/draft-du-anima-an-
+             intent/>.
+
+   [ONF] ONF, "Intent Definition Principles", 2017,
+             <https://www.opennetworking.org/images/stories/downloads/
+             sdn-resources/technical-reports/TR-
+             523_Intent_Definition_Principles.pdf>.
+
+   [ONOS] ONOS, "ONOS Intent Framework", 2017,
+             <https://wiki.onosproject.org/display/ONOS/Intent+Framework
+             />.
+
+   [SUPA] Strassner, J., "Simplified Use of Policy Abstractions",
+             2017, <https://datatracker.ietf.org/doc/draft-ietf-supa-
+             generic-policy-info-model/?include_text=1>.
+
+   [ANIMA-Prefix] Jiang, S., Du, Z., Carpenter, B., and Q. Sun,
+             "Autonomic IPv6 Edge Prefix Management in Large-scale
+             Networks", draft-ietf-anima-prefix-management-07 (work in
+             progress), December 2017.
+
+   [TMF-auto] Aaron Richard Earl Boasman-Patel,et, A whitepaper of
+             Autonomous Networks: Empowering Digital Transformation For
+             the Telecoms Industry, inform.tmforum.org, 15 May, 2019.
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 44]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+   [CLEMM]  A. Clemm, L. Ciavaglia, L. Granville, J. Tantsura, "Intent-
+             Based Networking - Concepts and Overview", Work in
+             Progress, draft-irtf-nmrg-ibn-concepts-definitions-02,
+             September 2020, https://tools.ietf.org/html/draft-irtf-
+             nmrg-ibn-concepts-definitions-02
+
+   [POC-IBN] Barbara Martini, Walter Cerroni, Molka Gharbaoui, Davide
+             Borsatti, "A multi-level approach to IBN", July 2020,
+             https://www.ietf.org/proceedings/108/slides/slides-108-
+             nmrg-ietf-108-hackathon-report-a-multi-level-approach-to-
+             ibn-02
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 45]
+
+Internet-Draft          Intent Classification             January 2021
+
+
+Authors' Addresses
+
+   Chen Li
+   China Telecom
+   No.118 Xizhimennei street, Xicheng District
+   Beijing  100035
+   P.R. China
+   Email: lichen.bri@chinatelecom.cn
+
+
+   Olga Havel
+   Huawei Technologies
+   Ireland
+   Email: olga.havel@huawei.com
+
+   Adriana Olariu
+   Huawei Technologies
+   Ireland
+   Email: adriana.olariu@huawei.com
+
+   Will(Shucheng) Liu
+   Huawei Technologies
+   P.R. China
+   Email: liushucheng@huawei.com
+
+   Pedro Martinez-Julia
+   NICT
+   Japan
+   Email: pedro@nict.go.jp
+
+   Jeferson Campos Nobre
+   Federal University of Rio Grande do Sul
+   Porto Alegre
+   Brazil
+   Email: jcnobre@inf.ufrgs.br
+
+   Diego R. Lopez
+   Telefonica I+D
+   Don Ramon de la Cruz, 82
+   Madrid  28006
+   Spain
+   Email: diego.r.lopez@telefonica.com
+
+
+
+
+
+
+
+Li, et al.              Expires July 11, 2021                [Page 46]
 
