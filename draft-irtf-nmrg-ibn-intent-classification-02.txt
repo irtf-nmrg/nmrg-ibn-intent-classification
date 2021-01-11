@@ -111,49 +111,49 @@ Table of Contents
 
 
    1. Introduction ................................................ 3
+      1.1. Scope .................................................. 5
    2. Key Words ................................................... 5
    3. Acronyms .................................................... 5
-   4. Abstract Intent Requirements................................. 7
-      4.1. What is Intent?......................................... 7
-      4.2. Intent Solutions and Intent Users ....................... 8
-      4.3. Benefits of Intents to Respond to Network Requirements.. 10
-      4.4. Intent Types that need to be supported ................. 11
-   5. Functional Characteristics and Behaviour .................... 13
-      5.1. Abstracting Intent Operation........................... 13
-      5.2. Intent User Types...................................... 14
-      5.3. Intent Scope .......................................... 15
-      5.4. Intent Network Scope................................... 15
-      5.5. Intent Abstraction..................................... 15
-      5.6. Intent Life-cycle...................................... 16
-      5.7. Hierarchy ............................................. 16
-   6. Intent Classification....................................... 17
-      6.1. Intent Classification Methodology ...................... 18
-      6.2. Intent Taxonomy........................................ 21
-      6.3. Intent Classification for Carrier Solution ............. 23
-         6.3.1. Intent Users and Intent Types ..................... 23
-         6.3.2. Intent Categories................................. 27
-         6.3.3. Intent Classification Example ..................... 27
-      6.4. Intent Classification for Data Center Solutions......... 31
-         6.4.1. Intent Users and Intent Types ..................... 31
-         6.4.2. Intent Categories................................. 35
-         6.4.3. Intent Classification Example ..................... 35
-      6.5. Intent Classification for Enterprise Solution .......... 39
-         6.5.1. Intent Users and Intent Types ..................... 39
-         6.5.2. Intent Categories................................. 41
-   7. Security Considerations..................................... 43
-   8. IANA Considerations ........................................ 43
-   9. Contributors ............................................... 43
-   10. Acknowledgments ........................................... 43
-   11. References ................................................ 43
-      11.1. Normative References.................................. 43
-      11.2. Informative References................................ 44
+   4. Definitions ................................................. 7
+   5. Abstract Intent Requirements................................. 7
+      5.1. What is Intent?......................................... 7
+      5.2. Intent Solutions and Intent Users ....................... 8
+      5.3. Benefits of Intents to Respond to Network Requirements.. 10
+      5.4. Intent Types that need to be supported ................. 11
+   6. Functional Characteristics and Behaviour .................... 13
+      6.1. Abstracting Intent Operation........................... 13
+      6.2. Intent User Types...................................... 14
+      6.3. Intent Scope .......................................... 15
+      6.4. Intent Network Scope................................... 15
+      6.5. Intent Abstraction..................................... 15
+      6.6. Intent Life-cycle...................................... 16
+      6.7. Hierarchy ............................................. 16
+   7. Intent Classification....................................... 17
+      7.1. Intent Classification Methodology ...................... 18
+      7.2. Intent Taxonomy........................................ 21
+      7.3. Intent Classification for Carrier Solution ............. 23
+         7.3.1. Intent Users and Intent Types ..................... 23
+         7.3.2. Intent Categories................................. 27
+         7.3.3. Intent Classification Example ..................... 27
+      7.4. Intent Classification for Data Center Solutions......... 31
+         7.4.1. Intent Users and Intent Types ..................... 31
+         7.4.2. Intent Categories................................. 35
+         7.4.3. Intent Classification Example ..................... 35
+      7.5. Intent Classification for Enterprise Solution .......... 39
+         7.5.1. Intent Users and Intent Types ..................... 39
+         7.5.2. Intent Categories................................. 41
+   8. Security Considerations..................................... 43
+   9. IANA Considerations ........................................ 43
+   10. Contributors .............................................. 43
+   11. Acknowledgments ........................................... 43
+   12. References ................................................ 43
+      12.1. Normative References.................................. 43
+      12.2. Informative References................................ 44
 
 1. Introduction
 
    The vision of intent-driven networks has attracted a lot of
    attention, as it promises to simplify the management of networks by
-   human operators. This is done by simply specifying what should happen
-   on the network, without giving any instructions on how to do it. This
 
 
 Li, et al.              Expires July 11, 2021                 [Page 3]
@@ -161,6 +161,8 @@ Li, et al.              Expires July 11, 2021                 [Page 3]
 Internet-Draft          Intent Classification             January 2021
 
 
+   human operators. This is done by simply specifying what should happen
+   on the network, without giving any instructions on how to do it. This
    promise led many telecom companies to begin adopting this new vision,
    and many Standards Development Organization (SDOs) to propose
    different intent framework.
@@ -206,8 +208,6 @@ Internet-Draft          Intent Classification             January 2021
    Currently, work is underway on unifying a common understanding of
    intent concepts and terminology. Concerning NMRG, [CLEMM] is a
    document to present a definition for intent as higher-level
-   declarative policy that operates at the level of network and services
-
 
 
 Li, et al.              Expires July 11, 2021                 [Page 4]
@@ -215,6 +215,7 @@ Li, et al.              Expires July 11, 2021                 [Page 4]
 Internet-Draft          Intent Classification             January 2021
 
 
+   declarative policy that operates at the level of network and services
    it provides. In addition, this document captures the differences
    between intent, policy and service.
 
@@ -259,7 +260,7 @@ Internet-Draft          Intent Classification             January 2021
 
      API: Application Programming Interface
 
-     CE: Customer Equipment
+
 
 
 Li, et al.              Expires July 11, 2021                 [Page 5]
@@ -267,6 +268,7 @@ Li, et al.              Expires July 11, 2021                 [Page 5]
 Internet-Draft          Intent Classification             January 2021
 
 
+     CE: Customer Equipment
 
      CFS: Customer Facing Service
 
@@ -306,7 +308,6 @@ Internet-Draft          Intent Classification             January 2021
 
      SDO: Standards Development Organization
 
-     SD-WAN: Software-Defined Wide-Area Network
 
 
 Li, et al.              Expires July 11, 2021                 [Page 6]
@@ -314,6 +315,7 @@ Li, et al.              Expires July 11, 2021                 [Page 6]
 Internet-Draft          Intent Classification             January 2021
 
 
+     SD-WAN: Software-Defined Wide-Area Network
 
      SLA: Service-Level Agreement
 
@@ -358,7 +360,6 @@ Internet-Draft          Intent Classification             January 2021
    The term Intent has become very widely used in the industry for
    different purposes, sometimes it is not even in agreement with SDO
    shared principles mentioned in the Introduction.
-
 
 
 Li, et al.              Expires July 11, 2021                 [Page 7]
